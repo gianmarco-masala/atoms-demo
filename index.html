@@ -17,12 +17,45 @@
   <body>
     <div class="status-bar"></div>
 
-    <nav class="bordered-nav">
-      <a href="/">Contribuisci</a>
-      <a href="/">Abbonati</a>
+    <nav class="heading-ctas">
+      <div class="main-btns">
+        <a href="/">Contribuisci</a>
+        <a href="/">Abbonati</a>
+      </div>
+      <a class="login-btn" href="/">
+        <div class="icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_124_3485)">
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.4302 7.70205C15.4302 9.74859 14.4161 11.5493 12.8844 12.5771C13.4388 12.7767 13.9758 13.0326 14.4874 13.3428C15.8757 14.1845 17.0281 15.3949 17.8291 16.8519C18.0153 17.1907 17.9062 17.6256 17.5798 17.8234C17.2509 18.0227 16.8323 17.9027 16.6449 17.5618C15.963 16.3212 14.9822 15.2915 13.8017 14.5758C12.6212 13.8601 11.2823 13.4842 9.91974 13.4842C8.55714 13.4842 7.21844 13.8601 6.03798 14.5758C4.85747 15.2915 3.87673 16.3212 3.19473 17.5618C3.00735 17.9027 2.58876 18.0227 2.25992 17.8234C1.93352 17.6256 1.82436 17.1907 2.0106 16.8519C2.81156 15.3949 3.96396 14.1845 5.35233 13.3428C5.86387 13.0326 6.40077 12.7767 6.95512 12.5771C5.42339 11.5493 4.40923 9.74861 4.40923 7.70205C4.40923 4.51236 6.87277 1.91992 9.91974 1.91992C12.9667 1.91992 15.4302 4.51236 15.4302 7.70205ZM5.7746 7.70205C5.7746 5.29239 7.63404 3.34565 9.91974 3.34565C12.2054 3.34565 14.0649 5.29239 14.0649 7.70205C14.0649 10.1117 12.2054 12.0585 9.91974 12.0585C7.63404 12.0585 5.7746 10.1117 5.7746 7.70205Z"
+                fill="black"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_124_3485">
+                <rect
+                  width="16"
+                  height="16"
+                  fill="white"
+                  transform="translate(2 2)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        Accedi
+      </a>
     </nav>
 
-    <nav class="menu bordered-nav">
+    <nav class="menu">
       <button class="menu-toggle">
         <div class="icon">
           <svg
@@ -80,6 +113,67 @@
       </button>
     </nav>
 
+    <nav class="menu-desktop">
+      <div class="links">
+        <a class="selected" href="/">Tutti i temi</a>
+        <a href="/">Ambiente</a>
+        <a href="/">Economia</a>
+        <a href="/">Mondo</a>
+        <a href="/">Non Profit</a>
+        <a href="/">Politica</a>
+        <a href="/">Società</a>
+        <a href="/">Welfare</a>
+      </div>
+      <div class="toggle">
+        <div class="icon">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.83635 22.9209C5.27878 22.9209 5 22.8089 5 22.5847C5 22.5452 5.00648 22.5056 5.01945 22.4661C5.03242 22.4134 5.04538 22.3606 5.05835 22.3079L9.66798 9.31638C9.73282 9.10546 9.99215 9 10.446 9H11.01C11.4639 9 11.7232 9.10546 11.788 9.31638L16.3977 22.3277C16.4366 22.42 16.456 22.5056 16.456 22.5847C16.456 22.8089 16.1772 22.9209 15.6197 22.9209H15.4641C15.2696 22.9209 15.101 22.9011 14.9584 22.8616C14.8157 22.8089 14.725 22.7232 14.6861 22.6045L13.5385 19.3616H7.82024L6.71159 22.6045C6.67269 22.7232 6.58193 22.8089 6.43929 22.8616C6.29666 22.9011 6.1281 22.9209 5.9336 22.9209H5.83635ZM8.36484 17.8588H13.0134L10.9711 11.9661C10.9193 11.7815 10.8739 11.5904 10.835 11.3927C10.7961 11.1949 10.7637 11.0038 10.7377 10.8192H10.6988C10.6599 11.0038 10.6145 11.1949 10.5627 11.3927C10.5238 11.5904 10.4719 11.7815 10.4071 11.9661L8.36484 17.8588Z"
+              fill="black"
+            />
+            <path
+              d="M20.0014 23C19.0548 23 18.2638 22.7627 17.6285 22.2881C16.9931 21.8004 16.6754 21.049 16.6754 20.0339C16.6754 19.2034 16.8699 18.5508 17.2589 18.0763C17.6479 17.5885 18.1601 17.2326 18.7955 17.0085C19.4308 16.7712 20.1246 16.6196 20.8766 16.5537C21.6416 16.4878 22.3937 16.4482 23.1328 16.435V15.5056C23.1328 15.0574 22.9772 14.6686 22.666 14.339C22.3548 14.0094 21.7972 13.8446 20.9933 13.8446C20.4098 13.8446 19.8976 13.9171 19.4568 14.0621C19.0289 14.194 18.6853 14.3324 18.4259 14.4774C18.1796 14.6092 18.024 14.6751 17.9591 14.6751C17.8684 14.6751 17.7711 14.6092 17.6674 14.4774C17.5636 14.3456 17.4729 14.2006 17.3951 14.0424C17.3173 13.871 17.2784 13.7524 17.2784 13.6864C17.2784 13.5151 17.4469 13.3305 17.7841 13.1328C18.1212 12.935 18.5686 12.7702 19.1261 12.6384C19.6837 12.4934 20.2866 12.4209 20.935 12.4209C21.7389 12.4209 22.4261 12.5461 22.9967 12.7966C23.5672 13.0339 24.0016 13.3832 24.2998 13.8446C24.611 14.306 24.7666 14.8663 24.7666 15.5254V19.9548C24.7666 20.4953 24.7861 20.9435 24.8249 21.2994C24.8638 21.6554 24.9028 21.9256 24.9417 22.1102C24.9806 22.2947 25 22.4068 25 22.4463C25 22.5386 24.9546 22.6177 24.8639 22.6836C24.7861 22.7363 24.6888 22.7825 24.5721 22.822C24.4554 22.8484 24.3387 22.8682 24.222 22.8814C24.1053 22.8945 24.0145 22.9011 23.9497 22.9011C23.7941 22.9011 23.6709 22.8286 23.5802 22.6836C23.5024 22.5254 23.4375 22.3409 23.3857 22.1299C23.3468 21.9058 23.3079 21.7015 23.269 21.5169C23.0226 21.7938 22.7373 22.0443 22.4132 22.2684C22.089 22.4925 21.7259 22.6704 21.324 22.8023C20.935 22.9341 20.4941 23 20.0014 23ZM20.0792 21.5565C20.7923 21.5565 21.3823 21.4181 21.8491 21.1412C22.3159 20.8644 22.7438 20.548 23.1328 20.1921V17.8588C22.6271 17.8588 22.102 17.8785 21.5574 17.9181C21.0128 17.9444 20.5006 18.0169 20.0208 18.1356C19.5411 18.2542 19.1521 18.4586 18.8538 18.7486C18.5686 19.0254 18.4259 19.4209 18.4259 19.935C18.4259 20.4623 18.5621 20.8644 18.8344 21.1412C19.1196 21.4181 19.5346 21.5565 20.0792 21.5565Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <button class="tag">
+          <div class="icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2 5.54545C2 4.69192 2.68879 4 3.53846 4H20.4615C21.3112 4 22 4.69192 22 5.54545V19.4545C22 20.3081 21.3112 21 20.4615 21H3.53846C2.68879 21 2 20.3081 2 19.4545V5.54545ZM20.4615 5.54545H3.53846V19.4545H20.4615V5.54545Z"
+                fill="black"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.55967 10.6218C7.74785 10.5426 7.94983 10.5019 8.15385 10.5019C8.35786 10.5019 8.55984 10.5426 8.74803 10.6218C8.93515 10.7005 9.10491 10.8156 9.24756 10.9604L13.5385 15.2709L13.5426 15.2667L15.5217 13.2785C15.6644 13.1337 15.8341 13.0187 16.0212 12.94C16.2094 12.8608 16.4114 12.8201 16.6154 12.8201C16.8194 12.8201 17.0214 12.8608 17.2096 12.94C17.3967 13.0187 17.5664 13.1337 17.709 13.2785L21.7747 17.3627C22.0751 17.6645 22.0751 18.1537 21.7747 18.4555C21.4743 18.7573 20.9872 18.7573 20.6868 18.4555L16.6154 14.3655L16.6113 14.3697L14.6346 16.3553L14.6322 16.3577C14.4895 16.5026 14.3198 16.6177 14.1326 16.6964C13.9445 16.7756 13.7425 16.8163 13.5385 16.8163C13.3344 16.8163 13.1325 16.7756 12.9443 16.6964C12.7572 16.6177 12.5874 16.5026 12.4447 16.3577L8.15383 12.0473L8.14971 12.0515L3.31316 16.91C3.01276 17.2118 2.52571 17.2118 2.2253 16.91C1.9249 16.6083 1.9249 16.119 2.2253 15.8172L7.0601 10.9605C7.20275 10.8156 7.37253 10.7005 7.55967 10.6218Z"
+                fill="black"
+              />
+              <path
+                d="M14.6923 10.9545C15.3296 10.9545 15.8462 10.4356 15.8462 9.79545C15.8462 9.15531 15.3296 8.63636 14.6923 8.63636C14.0551 8.63636 13.5385 9.15531 13.5385 9.79545C13.5385 10.4356 14.0551 10.9545 14.6923 10.9545Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </button>
+      </div>
+    </nav>
+
     <div class="topics-header">
       <div class="topics-title-row">
         <h1>Tutti i temi</h1>
@@ -103,19 +197,19 @@
         </button>
       </div>
       <div class="topics-content">
-        <button class="tag">
+        <button class="tag green">
           <span class="tag-text"> Ambiente </span>
         </button>
         <button class="tag">
           <span class="tag-text"> Economia </span>
         </button>
-        <button class="tag">
+        <button class="tag red">
           <span class="tag-text"> Mondo </span>
         </button>
         <button class="tag">
           <span class="tag-text"> Non Profit </span>
         </button>
-        <button class="tag">
+        <button class="tag yellow">
           <span class="tag-text"> Politica </span>
         </button>
         <button class="tag">
@@ -128,30 +222,30 @@
     </div>
 
     <main>
-      <div class="responsive-grid">
-        <div class="article-top">
-          <div class="overlay-dark"></div>
-          <div class="content default-container">
-            <button class="tag tag-small">
-              <span class="tag-text"> Migranti </span>
-            </button>
-            <h2 class="article-title">
-              Roccella Jonica, la Lampedusa che l'Italia ignora
-            </h2>
-            <div class="article-details">
-              <img
-                src="https://s3-alpha-sig.figma.com/img/d518/a92d/e059a7a3367ff920d07e1938b4e8cd8f?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UMZdSI9IswXvRw60NFKAH0pG2rpEJd8sgb417Q8RDFSdael5FMM87ECDrAZXibYnETrs0Yu~CSnorTckjL2skAKZvbSGk0w8Ccpe2ZjJ8zDaM1Fyg5P2bWDm-9XIMN2W-wohRWc1znwdWpBLQeMCft6z7xqAEvmAangqhN8MOZBnn5CBJ6dX8oeX2~WVU9NWzhlxVrD5XpmqNCqaJV6yNFDezDF9Ac-~kQHVUzXHpuD5iOyHePlsfTj699LSwkg5NBnw5y85Gg36tR~GaUxnnpXX0t9eRUyerXkcn-klfpg1peSbZNLzQh5BLg9JyAlDoD8B4WB90CXU3GB7QreJEA__"
-                alt="author image"
-                class="author-image"
-              />
-              <div class="article-info">
-                <div class="author">Di Alessandro Puglia</div>
-                <div class="date">20 Giugno 2022</div>
-              </div>
+      <div class="article-top">
+        <div class="overlay-dark"></div>
+        <div class="content default-container">
+          <button class="tag tag-small">
+            <span class="tag-text"> Migranti </span>
+          </button>
+          <h2 class="article-title">
+            Roccella Jonica, la Lampedusa che l'Italia ignora
+          </h2>
+          <div class="article-details">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/d518/a92d/e059a7a3367ff920d07e1938b4e8cd8f?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UMZdSI9IswXvRw60NFKAH0pG2rpEJd8sgb417Q8RDFSdael5FMM87ECDrAZXibYnETrs0Yu~CSnorTckjL2skAKZvbSGk0w8Ccpe2ZjJ8zDaM1Fyg5P2bWDm-9XIMN2W-wohRWc1znwdWpBLQeMCft6z7xqAEvmAangqhN8MOZBnn5CBJ6dX8oeX2~WVU9NWzhlxVrD5XpmqNCqaJV6yNFDezDF9Ac-~kQHVUzXHpuD5iOyHePlsfTj699LSwkg5NBnw5y85Gg36tR~GaUxnnpXX0t9eRUyerXkcn-klfpg1peSbZNLzQh5BLg9JyAlDoD8B4WB90CXU3GB7QreJEA__"
+              alt="author image"
+              class="author-image"
+            />
+            <div class="article-info">
+              <div class="author">Di Alessandro Puglia</div>
+              <div class="date">20 Giugno 2022</div>
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="responsive-grid">
         <div class="section default-container">
           <div class="video-preview">
             <img

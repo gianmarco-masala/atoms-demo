@@ -13,6 +13,7 @@ button,
   background: none;
   border: none;
   padding: 0;
+  cursor: pointer;
 }
 
 ul {
@@ -58,7 +59,13 @@ ul {
   height: 44px;
 }
 
-.bordered-nav {
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
   display: flex;
   height: 40px;
   border-top: solid 1px black;
@@ -76,7 +83,16 @@ ul {
     &:last-child {
       border-right: none;
     }
+
+    &.login-btn {
+      display: none;
+    }
   }
+}
+
+.heading-ctas .main-btns {
+  display: flex;
+  width: 100%;
 }
 
 .menu {
@@ -95,6 +111,10 @@ ul {
       border-left: solid 1px black;
     }
   }
+}
+
+.menu-desktop {
+  display: none;
 }
 
 .topics-header {
@@ -128,7 +148,7 @@ main {
     height: 320px;
     background-image: url("https://s3-alpha-sig.figma.com/img/4ed2/a214/44146596a39e532d863a717f24411c63?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=p9vgUUPa9MVawbnGC~ou8ZNFcAh9AYG30607a2x7MzgZ0pPEmw-WtsS3U098Bg8bikQwWTXDCHcJaPlq5D9UE~NWxQRQCkEgO5-gGA6n4u-H7DNiWghqd4VSMtKZKxb2rc30O-I2uJABZYPjTkH2zHHIrVLNV78VWp18CdzccO423JxEpL5lAjqhc7NCWzIWVpwPWwI-~xhlPHj3wozfRKJAACdYsMljzErpv1dRPMz~xafyufazsxYDs274TgHkxBjNQhSRH6xev8v7biYPjw-bEXRp1w8o0JXCudQcSgwyHj~4MbzzfIieJl2fp1yJ6x2lmDJ6I-NUO~plETdWeg__");
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
 
     .overlay-dark {
       position: absolute;
@@ -277,3 +297,138 @@ footer {
     margin-top: 16px;
   }
 }
+
+/* BEGIN Desktop media query  */
+
+@media only screen and (min-width: 768px) {
+  .status-bar {
+    display: none;
+  }
+
+  .heading-ctas {
+    border: none;
+    height: 48px;
+
+    a {
+      width: fit-content;
+      justify-content: flex-start;
+      padding: 0 16px;
+      border: none;
+
+      &.login-btn {
+        display: flex;
+
+        .icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    height: 96px;
+
+    button {
+      width: 96px;
+    }
+  }
+
+  .menu-desktop {
+    display: flex;
+    justify-content: space-between;
+    height: 96px;
+    padding: 0 40px;
+    border-top: none;
+    border-bottom: solid 1px black;
+
+    .links {
+      display: flex;
+
+      a {
+        position: relative;
+        width: auto;
+        padding: 0 16px;
+        border: none;
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+
+        &.selected::after {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          width: 100%;
+          height: 9px;
+          background: #ff2c33;
+        }
+      }
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+
+      .tag {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .topics-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 40px;
+
+    .topics-title-row {
+      h1 {
+        font-size: 51px;
+        line-height: 46px;
+      }
+
+      .icon-button {
+        display: none;
+      }
+    }
+
+    .topics-content {
+      display: flex;
+
+      .tag {
+        margin-bottom: 0;
+        margin-left: 16px;
+
+        &.green {
+          background: #e2f1e8;
+        }
+        &.red {
+          background: #f1dada;
+        }
+        &.yellow {
+          background: #f1f1e2;
+        }
+      }
+    }
+  }
+
+  main {
+    .article-top {
+      height: 506px;
+
+      .content {
+        padding: 44px 40px;
+
+        .article-title {
+          width: 80%;
+          padding-right: 1rem;
+          font-size: 40px;
+          line-height: 54px;
+        }
+      }
+    }
+  }
+}
+
+/* END Desktop media query  */
