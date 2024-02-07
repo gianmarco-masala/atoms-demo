@@ -232,10 +232,16 @@ main {
       border: solid 1px #cccccc;
       border-radius: 8px;
       padding: 0 16px;
-      margin-bottom: 20px;
+      margin: 20px 0;
+      background-color: white;
 
       .soundwave {
-        display: flex;
+        .mobile {
+          display: flex;
+        }
+        .desktop {
+          display: none;
+        }
       }
     }
   }
@@ -243,7 +249,6 @@ main {
   .article-details {
     display: flex;
     align-items: center;
-    height: 40px;
 
     .author-image {
       width: 32px;
@@ -260,6 +265,9 @@ main {
         font-size: 10px;
         line-height: 16px;
       }
+      .icon-btn {
+        display: none;
+      }
     }
   }
 
@@ -273,9 +281,14 @@ main {
       margin-bottom: 16px;
     }
 
-    .banner-action {
+    .banner-cta {
       display: flex;
       align-items: center;
+      font-weight: bold;
+
+      .icon {
+        margin-left: 4px;
+      }
     }
   }
 }
@@ -299,8 +312,7 @@ footer {
 }
 
 /* BEGIN Desktop media query  */
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
   .status-bar {
     display: none;
   }
@@ -428,7 +440,141 @@ footer {
         }
       }
     }
+
+    .responsive-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      height: 845px;
+
+      .section {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        border: none;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+
+        .overlay-dark {
+          position: absolute;
+          background: black;
+          opacity: 50%;
+          width: 100%;
+          height: 100%;
+        }
+
+        .video-preview {
+          display: none;
+        }
+
+        .content {
+          position: absolute;
+          color: white;
+          padding: 24px;
+
+          .audio-preview {
+            .soundwave {
+              max-width: 335px;
+
+              .mobile {
+                display: none;
+              }
+              .desktop {
+                display: flex;
+              }
+            }
+
+            .timer-info {
+              color: black;
+            }
+          }
+
+          .article-title {
+            font-size: 24px;
+            line-height: 32px;
+            padding-right: 50px;
+          }
+
+          .article-details {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .article-info {
+              margin-top: 10px;
+
+              .author,
+              .date {
+                margin-bottom: 8px;
+              }
+              .icon-btn {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      .section:nth-child(1) {
+        grid-area: 1 / 1 / 9 / 6;
+        flex-direction: column-reverse;
+        background-image: url("https://s3-alpha-sig.figma.com/img/4836/a9d1/6b12b5889d6ddad962a628409ed1fb35?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NBmkvwC9dd6DLM4o7A3CBPD8pXadLSa9xmbzrwCVceBrDvg88pTg-Vs2RdVaSvYI-bWePcnharNPt9GNPk5IC3cGice0V191LIknJDlXjku0iyB79-P4c8wIfVBB1l4UXg7j0iNnPGqA0dn8aTyyID1JjW3dx7YDuWAfZEWsY2gfi3m7oCaUR8HMCqlIIsnRGoOxpLZYmRLesP8YujRqOyBOcVnJ-wxRMrEHH~0hY~WcohpXfM6x~E-b19OubjpexSfHPWgH9KiG5ksRMtY5ID6JLO52S1IKH5akHIb5MgRQlbvVATte8X85gXYINym1fklJ-C98SMSBCni4ycJwbA__");
+
+        .article-title {
+          font-size: 32px;
+          line-height: 46px;
+        }
+      }
+
+      .section:nth-child(2) {
+        grid-area: 1 / 6 / 5 / 9;
+        background-image: url("https://s3-alpha-sig.figma.com/img/bae5/6314/414203738595db29ebe106300bc6ffb0?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=G8gRFeyjS84MCfZOFylSMZPjXsPYl3QkhAKClllAG8CXhq0lsZLjxfsjasPK5eC5nROhcVKjoeTqUxkAqFiLMa8hsw9vmJlAsiy7LFFGypcPOt89kNQwNy-MEx1kSlcezI09CiE08nd5xQibUzX3S3tI1uK7Au9HNIPbxzZ1Aizn7Ac5EahFeJHAL1G5~Xg4HFW4dy3F9OF5ENUpG56UYNKIuqEsB3TXsBN3qXO~Yr8B~R77DXbybq3vHDJMecUDWTYLajdKEUiQq9Tyy849mBbk0bTQAzExQjyf3NUKrRLbMGOBHoASYjrfJSeYEa3pcWUXFg2x4geRApI4RiudgA__");
+      }
+
+      .section:nth-child(3) {
+        grid-area: 5 / 6 / 9 / 9;
+        background-image: url("https://s3-alpha-sig.figma.com/img/b938/1971/14d45989ba68e34f07fdb3b34f4a5775?Expires=1708300800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jwuTtH2lGL8Fwqwnxhlz0sFnhEvJvwjhXHum3mGQHrOG~ylwtvGrA7hE1tAGRMM3cXKN3x7l4d6JIJQbmtd5BPWcdHmSOcKcGkzcPYWsevTMD8xL8HhLPAlWLRS3DmqBtiWCgS0DPhUa564vqK79F3DPR~HsnR9nLe-MeGl-YPo8Z5Pq~w64WrV5wWvRcVSqoLFR4X-7RP5~8Bj61tXV5DI~CFfEOad0RcOWZO-Uqj9jm0tve-RDHeol8TdrFXLTGKdbFSd-lXpBap4dlrwsBghd~KA~0ZaIaN755kPd9WqLzaFsVR61WA2U5qTIek8KSFerPBDERRhMTpDS-DRqZw__");
+      }
+    }
+
+    .banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 84px 40px;
+
+      .banner-title {
+        margin: 0;
+        font-size: 40px;
+        line-height: 46px;
+      }
+    }
+  }
+
+  footer.default-container {
+    padding: 48px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+
+      li {
+        margin-bottom: 0;
+        margin-left: 16px;
+
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .copyright-info {
+      margin: 0;
+    }
   }
 }
-
 /* END Desktop media query  */
