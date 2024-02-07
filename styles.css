@@ -428,6 +428,7 @@ footer {
   main {
     .article-top {
       height: 506px;
+      border-bottom: solid 1px white;
 
       .content {
         padding: 44px 40px;
@@ -445,6 +446,7 @@ footer {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(8, 1fr);
+      grid-gap: 1px;
       height: 845px;
 
       .section {
